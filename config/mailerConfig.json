@@ -1,0 +1,20 @@
+{
+    "gmail":
+    {
+        "email": "pigeon.serv@gmail.com",
+        "user": "pigeon.serv@gmail.com",
+        "pass": "987654321d",
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "img": "email.img"
+    },
+    "sendGrid":
+    {
+        "email": "pigeon.serv@gmail.com",
+        "user": "apikey",
+        "pass": "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",
+        "host": "smtp.sendgrid.net",
+        "port": 587,
+        "img": "email.img"
+    }
+}
