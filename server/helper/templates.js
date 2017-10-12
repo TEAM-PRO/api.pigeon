@@ -1,0 +1,3 @@
+module.exports = {
+    activation: 'activation'
+};
