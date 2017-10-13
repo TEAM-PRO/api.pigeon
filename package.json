@@ -47,13 +47,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lv-237-NodeJS/api.da-mi.git"
+    "url": "git+https://github.com/TEAM-PRO/api.pigeon.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lv-237-NodeJS/api.da-mi/issues"
+    "url": "https://github.com/TEAM-PRO/api.pigeon/issues"
   },
-  "homepage": "https://github.com/Lv-237-NodeJS/api.da-mi#readme"
+  "homepage": "https://github.com/TEAM-PRO/api.pigeon#readme"
 }
