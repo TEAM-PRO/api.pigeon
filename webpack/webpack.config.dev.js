@@ -14,15 +14,15 @@ module.exports = {
   externals: [NodeExternals()],
 
   module: {
-      rules: [{
-          test: /\.js?$/,
-          use: 'babel-loader',
-        },
-        {
-          test: /\.json$/,
-          use: 'json-loader',
-        },
-      ],
+    rules: [{
+        test: /\.js?$/,
+        use: 'babel-loader',
+      },
+      {
+        test: /\.json$/,
+         use: 'json-loader',
+      },
+    ],
   },
 
   plugins: [
