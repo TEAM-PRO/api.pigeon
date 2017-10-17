@@ -7,8 +7,7 @@ module.exports = {
       'QWERTYUIOPASDFGHJKLZXCVBNM',
       '#?!@$%^&*-',
       '1234567890'
-    ];
-    
+    ];  
     let password = '';
 
     for (let i = 0; i < 3; i++) {
