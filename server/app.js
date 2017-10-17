@@ -21,8 +21,9 @@ app.use(bodyParser.urlencoded({ limit: '2mb', extended: true }));
 app.use(cors());
 
 app.use('*', (req, res, next) => {
-    !token(req) && !checkURL(req.baseUrl) && res.status(401).json({ 'message': messages.noToken }) ||
-        token(req) && verifyToken(token(req), req, next) || checkURL(req.baseUrl) && next();
+    !token(req) && !checkURL(req.baseUrl) &&
+      res.status(401).json({ 'message': messages.noToken }) ||
+      token(req) && verifyToken(token(req), req, next) || checkURL(req.baseUrl) && next();
 });
 
 require('./routes')(app);

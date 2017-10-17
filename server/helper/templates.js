@@ -1,3 +1,3 @@
 module.exports = {
-    activation: 'activation'
+  activation: 'activation'
 };
