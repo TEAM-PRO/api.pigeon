@@ -58,8 +58,9 @@ module.exports = (sequelize, DataTypes) => {
           pigeon.updatedAt = new Date().getTime();
         },
         beforeUpdate: (pigeon, options) => {
-          pigeon.updatedAt = new Date().getTime();            }
+          pigeon.updatedAt = new Date().getTime();            
         }
+      }
     });
   return Pigeon;
 };

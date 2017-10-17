@@ -34,8 +34,8 @@ module.exports = {
         },
         forSale: {
           type: Sequelize.BOOLEAN,
-            defaultValue: false,
-            allowNull: false
+          defaultValue: false,
+          allowNull: false
         },
         controllerNumber: {
           type: Sequelize.INTEGER,
