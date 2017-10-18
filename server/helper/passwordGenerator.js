@@ -13,7 +13,6 @@ module.exports = {
     for (let i = 0; i < 3; i++) {
       password += chars.map(char => char.charAt(Math.floor(Math.random() * char.length))).join('');
     }
-
     return password;
   }
 };
