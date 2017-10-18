@@ -36,6 +36,7 @@
     "frisby": "^0.8.5",
     "istanbul": "^0.4.5",
     "jasmine-node": "^1.14.5",
+    "minimatch": "^3.0.2",
     "nodemon": "^1.11.0"
   },
   "scripts": {

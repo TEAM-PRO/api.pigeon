@@ -15,19 +15,19 @@ module.exports = {
 
   module: {
     rules: [{
-        test: /\.js?$/,
-        use: 'babel-loader',
-      },
-      {
-        test: /\.json$/,
-        use: 'json-loader',
-      },
+      test: /\.js?$/,
+      use: 'babel-loader',
+    },
+    {
+      test: /\.json$/,
+      use: 'json-loader',
+    },
     ],
   },
 
   plugins: [
-      new webpack.NoEmitOnErrorsPlugin(),
-      new webpack.EnvironmentPlugin({ 'NODE_ENV': 'development' }),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.EnvironmentPlugin({ 'NODE_ENV': 'development' }),
   ],
 
   devtool: 'source-map',

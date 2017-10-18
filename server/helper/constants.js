@@ -11,5 +11,5 @@ module.exports = {
   TIME: {
     ACTIVATION_TOKEN: '5d',
     LOGIN_TOKEN: '1d'
-  },
+  }
 };

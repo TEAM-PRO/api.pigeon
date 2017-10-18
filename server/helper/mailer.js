@@ -18,6 +18,7 @@ const transport = nodemailer.createTransport(smtpTransport({
   logger: false,
   debug: false
 }));
+
 const templatesDir = ('./server/views/emails');
 
 module.exports = {
@@ -25,26 +26,26 @@ module.exports = {
     const template = new EmailTemplate(path.join(templatesDir, _template));
     const url = `${_data.host}${_data.route}${_data.token || ''}`;
     const locals = {
-        firstName: _data.firstName,
-        lastName: _data.lastName,
-        ownerFirstName: _data.ownerFirstName,
-        ownerLastName: _data.ownerLastName,
-        to: _data.email,
-        url: url,
-        eventName: _data.eventName,
-        date: _data.date,
-        eventDescription: _data.eventDescription,
-        text: _data.text,
-        mailsForSupport: _data.mailsForSupport,
-        giftName: _data.giftName
-      };
+      firstName: _data.firstName,
+      lastName: _data.lastName,
+      ownerFirstName: _data.ownerFirstName,
+      ownerLastName: _data.ownerLastName,
+      to: _data.email,
+      url: url,
+      eventName: _data.eventName,
+      date: _data.date,
+      eventDescription: _data.eventDescription,
+      text: _data.text,
+      mailsForSupport: _data.mailsForSupport,
+      giftName: _data.giftName
+    };
 
     template.render(locals, (error, sendMail) => {
       if (error) {
         return error;
       }
       const mailOptions = {
-        from: `Da-Mi<${secret.email}>`,
+        from: `Pigeon<${secret.email}>`,
         to: locals.to,
         subject: _data.subject,
         html: sendMail.html,
