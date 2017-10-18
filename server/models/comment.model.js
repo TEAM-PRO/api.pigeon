@@ -31,11 +31,11 @@ module.exports = (sequelize, DataTypes) => {
     classMethods: {
       associate: models => {
         Comment.belongsTo(models.User, {
-            foreignKey: 'ownerId',
-            hooks: true
+          foreignKey: 'ownerId',
+          hooks: true
         });
         Comment.belongsTo(models.Pigeon, {
-            foreignKey: 'id'
+          foreignKey: 'id'
         });
       }
     },
