@@ -64,3 +64,4 @@ module.exports = (sequelize, DataTypes) => {
     });
   return Pigeon;
 };
+
