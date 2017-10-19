@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.VARCHAR(40),
+        type: Sequelize.STRING(40),
         allowNull: false
       },
       date: {
@@ -18,7 +18,7 @@ module.exports = {
         allowNull: false
       },
       place: {
-        type: Sequelize.VARCHAR(40),
+        type: Sequelize.STRING(40),
         allowNull: true
       },
       firstPlaceWinnerId: {
