@@ -2,12 +2,12 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) =>
-    queryInterface.bulkInsert('Pigeon', [
+    queryInterface.bulkInsert('Pigeons', [
       {
         ownerId: 1,
         price: 750.00,
-        age: 2,
-        numberRing: 2,
+        age: 2.5,
+        numberRing: 212345,
         country: 'USA',
         forSale: false,
         controllerNumber: 1235,
@@ -18,7 +18,7 @@ module.exports = {
         ownerId: 1,
         price: 600.00,
         age: 1,
-        numberRing: 3,
+        numberRing: 334231,
         country: 'Ukraine',
         forSale: true,
         controllerNumber: 1242,
@@ -29,7 +29,7 @@ module.exports = {
         ownerId: 2,
         price: 1225.00,
         age: 3,
-        numberRing: 3,
+        numberRing: 328990,
         country: 'Italy',
         forSale: false,
         controllerNumber: 1222,
@@ -38,5 +38,5 @@ module.exports = {
       },
     ]),
   down: (queryInterface, Sequelize) =>
-    queryInterface.bulkDelete('Pigeon', null)
+    queryInterface.bulkDelete('Pigeons', null)
 };
