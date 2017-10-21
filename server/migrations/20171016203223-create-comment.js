@@ -1,44 +1,39 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    queryInterface.createTable('Pigeons', {
+    queryInterface.createTable('Comments', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      ownerId: {
+      userId: {
         type: Sequelize.INTEGER,
+        unique: false,
+        allowNull: false,
         onDelete: 'CASCADE',
         references: {
           model: 'User',
           key: 'id'
         }
       },
-      price: {
-        type: Sequelize.FLOAT,
-        allowNull: false
-      },
-      age: {
-        type: Sequelize.FLOAT,
-        allowNull: false
-      },
-      numberRing: {
+      pigeonId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        unique: false,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Pigeon',
+          key: 'id'
+        }
       },
-      country: {
-        type: Sequelize.STRING(40),
-        allowNull: false
+      date: {
+        type: Sequelize.BIGINT,
+        allowNull: true
       },
-      forSale: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
-      },
-      controllerNumber: {
-        type: Sequelize.INTEGER,
+      body: {
+        type: Sequelize.TEXT,
         allowNull: false
       },
       createdAt: {
@@ -52,6 +47,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    queryInterface.dropTable('Pigeons');
+    queryInterface.dropTable('Comments');
   }
 };
