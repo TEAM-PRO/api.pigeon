@@ -1,5 +1,5 @@
- 'use strict';
- 
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const Exhibition = sequelize.define('Exhibition', {
     date: {
