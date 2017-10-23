@@ -12,15 +12,30 @@ module.exports = (sequelize, DataTypes) => {
     },
     firstPlaceWinnerId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'Pigeons',
+        key: 'id'
+      }
     },
     secondPlaceWinnerId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'Pigeons',
+        key: 'id'
+      }
     },
     thirdPlaceWinnerId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'Pigeons',
+        key: 'id'
+      }
     },
     name: {
       type: DataTypes.VARCHAR(40),
@@ -36,6 +51,22 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     timestamps: false,
+    classMethods: {
+      associate: models => {
+        Competition.belongsTo(models.Pigeon, {
+          foreignKey: 'firstPlaceWinnerId',
+          hooks: true
+        });
+        Competition.belongsTo(models.Pigeon, {
+          foreignKey: 'secondPlaceWinnerId',
+          hooks: true
+        });
+        Competition.belongsTo(models.Pigeon, {
+          foreignKey: 'thirdPlaceWinnerId',
+          hooks: true
+        });
+      }
+    },
     hooks: {
       beforeCreate: (exhibition, options) => {
         exhibition.date && (exhibition.date = Date.parse(exhibition.date));
