@@ -15,7 +15,7 @@ module.exports = {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'Pigeon',
+          model: 'Pigeons',
           key: 'id'
         }
       },
@@ -24,7 +24,7 @@ module.exports = {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'Pigeon',
+          model: 'Pigeons',
           key: 'id'
         }
       },
@@ -33,7 +33,7 @@ module.exports = {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'Pigeon',
+          model: 'Pigeons',
           key: 'id'
         }
       },

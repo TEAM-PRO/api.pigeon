@@ -18,7 +18,7 @@ module.exports = {
         place: 'Lviv',
         firstPlaceWinnerId: 2,
         secondPlaceWinnerId: 3,
-        thirdPlaceWinnerId: 4,
+        thirdPlaceWinnerId: 1,
         name: 'Mikky',
         createdAt: Date.now(),
         updatedAt: Date.now()
@@ -28,7 +28,7 @@ module.exports = {
         place: 'Kyiv',
         firstPlaceWinnerId: 2,
         secondPlaceWinnerId: 3,
-        thirdPlaceWinnerId: 4,
+        thirdPlaceWinnerId: 1,
         name: 'Doc',
         createdAt: Date.now(),
         updatedAt: Date.now()

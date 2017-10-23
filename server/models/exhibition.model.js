@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     firstPlaceWinnerId: {
       type: DataTypes.INTEGER,
-      allowNull: false   
+      allowNull: false
     },
     secondPlaceWinnerId: {
       type: DataTypes.INTEGER,
