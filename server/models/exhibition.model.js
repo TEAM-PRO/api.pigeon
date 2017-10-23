@@ -12,30 +12,15 @@ module.exports = (sequelize, DataTypes) => {
     },
     firstPlaceWinnerId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'Pigeons',
-        key: 'id'
-      }
+      allowNull: false   
     },
     secondPlaceWinnerId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'Pigeons',
-        key: 'id'
-      }
+      allowNull: false
     },
     thirdPlaceWinnerId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'Pigeons',
-        key: 'id'
-      }
+      allowNull: false
     },
     name: {
       type: DataTypes.VARCHAR(40),

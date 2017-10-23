@@ -12,15 +12,30 @@ module.exports = {
       },
       firstPlaceWinnerId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Pigeon',
+          key: 'id'
+        }
       },
       secondPlaceWinnerId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Pigeon',
+          key: 'id'
+        }
       },
       thirdPlaceWinnerId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Pigeon',
+          key: 'id'
+        }
       },
       name: {
         type: Sequelize.STRING(40),
