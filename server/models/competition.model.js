@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     hooks: {
       beforeCreate: (competition, options) => {
+        competition.date && (competition.date = Date.parse(competition.date));
         competition.createdAt = new Date().getTime();
         competition.updatedAt = new Date().getTime();
       },
