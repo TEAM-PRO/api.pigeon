@@ -1,26 +1,17 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    queryInterface.createTable('Comments', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
+    queryInterface.createTable('Exhibitions', {
+      date: {
+        type: Sequelize.BIGINT,
+        allowNull: true
       },
-      userId: {
-        type: Sequelize.INTEGER,
-        unique: false,
-        allowNull: false,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'Users',
-          key: 'id'
-        }
+      place: {
+        type: Sequelize.STRING(40),
+        allowNull: false
       },
-      pigeonId: {
+      firstPlaceWinnerId: {
         type: Sequelize.INTEGER,
-        unique: false,
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
@@ -28,12 +19,26 @@ module.exports = {
           key: 'id'
         }
       },
-      date: {
-        type: Sequelize.BIGINT,
-        allowNull: true
+      secondPlaceWinnerId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Pigeons',
+          key: 'id'
+        }
       },
-      body: {
-        type: Sequelize.TEXT,
+      thirdPlaceWinnerId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Pigeons',
+          key: 'id'
+        }
+      },
+      name: {
+        type: Sequelize.STRING(40),
         allowNull: false
       },
       createdAt: {
@@ -47,6 +52,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    queryInterface.dropTable('Comments');
+    queryInterface.dropTable('Exhibitions');
   }
 };
