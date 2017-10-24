@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     },
     place: {
-      type: DataTypes.VARCHAR(40),
+      type: DataTypes.STRING(40),
       allowNull: false
     },
     firstPlaceWinnerId: {
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     name: {
-      type: DataTypes.VARCHAR(40),
+      type: DataTypes.STRING(40),
       allowNull: false
     },
     createdAt: {
@@ -38,15 +38,15 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
     classMethods: {
       associate: models => {
-        Competition.belongsTo(models.Pigeon, {
+        Exhibition.belongsTo(models.Pigeon, {
           foreignKey: 'firstPlaceWinnerId',
           hooks: true
         });
-        Competition.belongsTo(models.Pigeon, {
+        Exhibition.belongsTo(models.Pigeon, {
           foreignKey: 'secondPlaceWinnerId',
           hooks: true
         });
-        Competition.belongsTo(models.Pigeon, {
+        Exhibition.belongsTo(models.Pigeon, {
           foreignKey: 'thirdPlaceWinnerId',
           hooks: true
         });

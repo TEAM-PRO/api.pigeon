@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     country: {
-      type: DataTypes.VARCHAR(40),
+      type: DataTypes.STRING(40),
       allowNull: false
     },
     forSale: {
