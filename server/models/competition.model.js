@@ -3,7 +3,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Competition = sequelize.define('Competition', {
     name: {
-      type: DataTypes.VARCHAR(40),
+      type: DataTypes.STRING(40),
       allowNull: false
     },
     date: {
@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     place: {
-      type: DataTypes.VARCHAR(40),
+      type: DataTypes.STRING(40),
       allowNull: true
     },
     firstPlaceWinnerId: {

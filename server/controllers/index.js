@@ -3,5 +3,5 @@ const userController = require('./user.controller');
 
 module.exports = {
   profileController,
-  userController,
+  userController
 };
