@@ -9,7 +9,7 @@ module.exports = {
         firstPlaceWinnerId: 1,
         secondPlaceWinnerId: 2,
         thirdPlaceWinnerId: 3,
-        name: 'Charly',
+        name: 'First world Exhibition',
         createdAt: Date.now(),
         updatedAt: Date.now()
       },
@@ -19,7 +19,7 @@ module.exports = {
         firstPlaceWinnerId: 2,
         secondPlaceWinnerId: 3,
         thirdPlaceWinnerId: 1,
-        name: 'Mikky',
+        name: 'Lviv Exhibition',
         createdAt: Date.now(),
         updatedAt: Date.now()
       },
@@ -29,7 +29,7 @@ module.exports = {
         firstPlaceWinnerId: 2,
         secondPlaceWinnerId: 3,
         thirdPlaceWinnerId: 1,
-        name: 'Doc',
+        name: 'Exhibition for decorators pigeons',
         createdAt: Date.now(),
         updatedAt: Date.now()
       },
